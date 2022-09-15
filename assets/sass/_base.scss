@@ -44,8 +44,10 @@ main {
   --responsive-font: 1.83rem;
 }
 
-$color-primary : #284F10;
-$color-secondary : #58B11F;
+// $color-primary : #284F10;
+$color-primary : #89124a;
+// $color-secondary : #58B11F;
+$color-secondary : #14bef0;
 
 /* ---------const------------*/
 
@@ -666,6 +668,6 @@ html {
   }
 }
 
-li{
+li {
   list-style: none;
 }
