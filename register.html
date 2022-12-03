@@ -261,7 +261,7 @@
                                                 class="form-control login__input"
                                                 placeholder="Enter Registration Number">
                                         </div>
-                                        <div class="mb-4 registerFormInput form--doctor">
+                                        <div class="mb-4 registerFormInput form--doctor work--clinic">
                                             <label for="clinicSelect" class="form-label login__label">Clinic </label>
                                             <select name="clinicSelect" class="login__input">
                                                 <option value=""></option>
@@ -274,10 +274,14 @@
                                                 clinic first !</p>
 
                                         </div>
-                                        <div class="mb-4 registerFormInput form--doctor">
+                                        <div class="mb-4 registerFormInput form--doctor work-place">
                                             <label for="wplace" class="form-label login__label">Work Place</label>
-                                            <input type="text" name="wplace" id="wplace" value=""
-                                                class="form-control login__input" placeholder="Enter Work Place">
+                                            <select name="wplace" class="login__input" id="registerWorkPlaceSelect">
+                                                <option value=""></option>
+                                                <option value="clinic">Clinic</option>
+                                                <option value="home">Home</option>
+                                                <option value="other">other</option>
+                                            </select>
                                         </div>
 
                                         <div class="mb-4 registerFormInput form--common">

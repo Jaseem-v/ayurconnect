@@ -150,6 +150,7 @@ $('a[href^="#"]').on('click', function (e) {
 
 const registerSelect = document.querySelector('#registerSelect')
 const registerBtn = document.querySelector('.registerBtn')
+const clinicSelect = document.querySelector(".work--clinic")
 
 
 if (registerSelect) {
@@ -162,8 +163,10 @@ if (registerSelect) {
 
     registerSelect.addEventListener("change", () => {
 
+
         var selectedOption = registerSelect.options[registerSelect.selectedIndex].value;
         var selectedText = registerSelect.options[registerSelect.selectedIndex].text;
+
 
 
         console.log(`form--${selectedOption}`);
@@ -180,6 +183,21 @@ if (registerSelect) {
                     $(".registerSelect-block").after(`${el.outerHTML}`)
                 }
             })
+
+            const registerWorkPlaceSelect = document.querySelector("#registerWorkPlaceSelect")
+            console.log(registerWorkPlaceSelect);
+            $(".work--clinic").remove();
+
+            if (registerWorkPlaceSelect) {
+                registerWorkPlaceSelect.addEventListener("change", (e) => {
+                    $(".work--clinic").remove();
+                    var WorkPlaceOption = registerWorkPlaceSelect.options[registerWorkPlaceSelect.selectedIndex].value;
+                    console.log(WorkPlaceOption);
+                    if (WorkPlaceOption == "clinic") {
+                        $(".work-place").after(`${clinicSelect.outerHTML}`)
+                    }
+                })
+            }
 
             populateCountries("country", "state");
 
